@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>SUSHI QUIZ</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+
+<body>
+<script type="text/javascript">
+		history.pushState(null, null, null);
+	
+		window.addEventListener("popstate", function() {
+			history.pushState(null, null, null);
+		});
+	</script>
+    <div id="main">
+        <p class="mondai">
+            結果
+        </p>
+
+        <div class="tokuten">
+          <p>
+            {{score}}/{{total}}
+          </p>
+        </div>
+
+
+      <div class="reset">
+        <form method="post" action="first">
+	  {% csrf_token %}
+		<input type="submit" name="button" value="もう一回">
+	    </form>
+	  </div>
+
+    </div>
+
+
+
+    </body>
+
+</html>

@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>SUSHI QUIZ</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/quizy.css' %}">
+</head>
+
+<body>
+	<script type="text/javascript">
+		history.pushState(null, null, null);
+	
+		window.addEventListener("popstate", function() {
+			history.pushState(null, null, null);
+		});
+	</script>
+    <div id="main">
+        <p class="mondai">
+            {{str}}
+        </p>
+
+    <div class="sushis">
+        <img src="{{neta0.addr}}" />
+		<img src="{{neta1.addr}}" />
+		<img src="{{neta2.addr}}" />
+		<img src="{{neta3.addr}}" />
+</div>
+    <div class="taberu">
+      <form method="post" action="more">
+	  {% csrf_token %}
+		<input type="image" name="button" src="{{ans.addr}}" alt="{{ans.id}}">
+		<input type="hidden" name="score" value="{{score}}">
+		<input type="hidden" name="total" value="{{total}}">
+    </div>
+
+    </div>
+
+
+
+    </body>
+
+</html>

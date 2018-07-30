@@ -1,0 +1,80 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+	<script type="text/javascript">
+		history.pushState(null, null, null);
+	
+		window.addEventListener("popstate", function() {
+			history.pushState(null, null, null);
+		});
+	</script>
+		<!--<img src="{% static 'img/Neu1.PNG' %}",alt="">-->
+        <div class="page-header">
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+
+        <div class="content container">
+		
+    <div class="row">
+        <div class="col-md-8">
+            <div>which is {{neta4.name}}?</div>
+            
+				<form method="post" action="output">
+					{% csrf_token %}
+					<input type="image" name="button" src="{{neta0.addr}}" alt="neta0">
+					<input type="hidden" name="select" value="{{neta0.id}}">
+					<input type="hidden" name="ans" value="{{neta4.id}}">
+					<input type="hidden" name="choices" value="{{neta0.id}},{{neta1.id}},{{neta2.id}},{{neta3.id}}">
+					<input type="hidden" name="score" value="{{score}}">
+					<input type="hidden" name="total" value="{{total}}">
+				</form>
+               
+			   
+			   <form method="post" action="output">
+					{% csrf_token %}
+					<input type="image" name="button" src="{{neta1.addr}}" alt="neta1">
+					<input type="hidden" name="select" value="{{neta1.id}}">
+					<input type="hidden" name="ans" value="{{neta4.id}}">
+					<input type="hidden" name="choices" value="{{neta0.id}},{{neta1.id}},{{neta2.id}},{{neta3.id}}">
+					<input type="hidden" name="score" value="{{score}}">
+					<input type="hidden" name="total" value="{{total}}">
+				</form>
+				
+				
+				
+				<form method="post" action="output">
+					{% csrf_token %}
+					<input type="image" name="button" src="{{neta2.addr}}" alt="neta2">
+					<input type="hidden" name="select" value="{{neta2.id}}">
+					<input type="hidden" name="ans" value="{{neta4.id}}">
+					<input type="hidden" name="choices" value="{{neta0.id}},{{neta1.id}},{{neta2.id}},{{neta3.id}}">
+					<input type="hidden" name="score" value="{{score}}">
+					<input type="hidden" name="total" value="{{total}}">
+				</form>
+				
+				
+				
+				<form method="post" action="output">
+					{% csrf_token %}
+					<input type="image" name="button" src="{{neta3.addr}}" alt="neta2">
+					<input type="hidden" name="select" value="{{neta3.id}}">
+					<input type="hidden" name="ans" value="{{neta4.id}}">
+					<input type="hidden" name="choices" value="{{neta0.id}},{{neta1.id}},{{neta2.id}},{{neta3.id}}">
+					<input type="hidden" name="score" value="{{score}}">
+					<input type="hidden" name="total" value="{{total}}">
+				</form>
+			   
+			   <p>score: {{score}}</p>
+            
+        </div>
+    </div>
+</div>
+    </body>
+</html>

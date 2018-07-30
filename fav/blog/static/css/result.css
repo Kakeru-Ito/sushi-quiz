@@ -1,0 +1,70 @@
+
+html,body{
+  height: 100%;
+}
+
+.main{
+  height: 100%;
+}
+
+body{
+  background-image: url("susikekka.png");
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center top;
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  /*background-attachment: fixed;*/
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #ffffff;
+  background-size: contain;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  align-items: center;
+}
+
+
+.mondai{
+  text-align: center;
+  font-size: 24;
+  /*width: 30%;*/
+  padding-top: 12%;
+  margin: 0 auto;
+  max-width: 18%;
+  color: red;
+  heght: 10%;
+  margin-bottom: 4.8%;
+}
+
+.tokuten{
+  text-align: center;
+  font-size: 60;
+  /*width: 30%;*/
+  padding-top: 5%;
+  margin: 0 auto;
+  max-width: 20%;
+  color: red;
+  heght: 10%;
+  margin-bottom: 4.8%;
+}
+
+.reset img{
+  position: absolute;
+  left: 25%;
+  width: 100px;
+  height: auto;
+  position: center absolute;
+}
+
+/*.mondai p{
+  position: absolute;
+  margin: 0;
+  padding: 0 0.8em;
+  font-size: 150%;
+  text-align: center;
+  color:red;
+  top: 130px;
+  width: 150px;
+  text-align: center;
+}*/
